@@ -1,133 +1,42 @@
-<!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:8090/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Instant Markdown</title>
-  <style>
-      .markdown-body {
-          box-sizing: border-box;
-          min-width: 200px;
-          max-width: 980px;
-          margin: 0 auto;
-          padding: 45px;
-      }
-    </style>
-<link rel="stylesheet" href="css/github-markdown.css">
-<link rel="stylesheet" href="css/github-highlight.css">
-<script src="js/socket.io.js"></script>
-<script>
-      var socket = io();
-      socket.on('markdown', function (msg) {
-        document.getElementById("markdown").innerHTML = msg;
-        var cursor = document.getElementById("instant-markdown-cursor");
-        if (cursor) {
-          cursor.scrollIntoView();
-        }
-      });
-      socket.on('disconnect', function() {
-        window.close();
-      })
-    </script>
-</head>
-
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/github-markdown.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+        <style>
+                .markdown-body {
+                    box-sizing: border-box;
+                    min-width: 200px;
+                    max-width: 980px;
+                    margin: 0 auto;
+                    padding: 45px;
+                }
+            
+                @media (max-width: 767px) {
+                    .markdown-body {
+                        padding: 15px;
+                    }
+                }
+            </style>
+    </head>
+        
 <body>
-  <article id="markdown" class="markdown-body"><h1 id="yanze-wu">Yanze Wu</h1>
-<div>
-<img style="float: right;margin-left:5%;" src="imgs/Santa monica.jpg">
-<div>
-<p>Senior Undergraduate Student, Shanghai Jiao Tong University</p>
-<p>Zhiyuan Honorship, Chemistry</p>
-<p>Member of <a href="https://sun.sjtu.edu.cn/">Computational Chemistry Lab</a> at SJTU</p>
-<p><strong>Email</strong>: <a href="mailto:wuyanze@sjtu.edu.cn">wuyanze AT sjtu.edu.cn</a></p>
-<p><strong>Github</strong>: <a href="https://github.com/flipboards">flipboards</a></p>
-<p><strong>Acedemic Interest</strong>: Computational Science (Computer chemistry/physics/biology, computer science, complex system simulation and visualization</p>
-</div>
-</div>
-<br>
-<h2 id="research-experiences">Research Experiences</h2>
-<ul>
-<li>
-<p><strong>2015.1 ~ 2016.1</strong>     Undergraduate research program in <a href="http://afo.sjtu.edu.cn/">Xinliang Feng's group</a> at SJTU</p>
-<ul>
-<li><em>PN Heterostructures Based on Graphene Quantum Dots for Energy Storage and Conversion</em></li>
-</ul>
-</li>
-<li>
-<p><strong>2016.2 ~ present</strong>        Computational Chemistry Lab at SJTU</p>
-<ul>
-<li>
-<p><em>Reaction Kinetic Model from Simulation</em> (See project below)</p>
-</li>
-<li>
-<p><em>Phase boundary detection in high-throughput computation using Canny edge detection</em> (Part of <a href="https://doi.org/10.1016/j.fluid.2017.08.021">A high-throughput computing procedure for predicting vapor-liquid equilibria of binary mixtures–Using carbon dioxide and n-alkanes as examples. Fluid Phase Equilibria, 452, 58-68.</a>)</p>
-</li>
-<li>
-<p><em>High throughput computation of transport properties of ionic liquids (Current)</em></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>2017.6~2017.8</strong>    Summer internship at <a href="http://www.che.caltech.edu/groups/jfb/index.html">Brady Group</a> at Caltech</p>
-<ul>
-<li><em>Influence of Activity on the Dynamics and Phase Behavior of Colloidal Gels</em></li>
-</ul>
-</li>
-</ul>
-<br>
-<h2 id="research-projects">Research Projects</h2>
-<h3 id="reaction-kinetic-model-from-simulation">Reaction Kinetic Model from Simulation</h3>
-<p>The combination of classical MD and Reactive Force Field (ReaxFF) is a promising approach for studying chemical reaction mechanism. We develop an
-automatic program <strong>ReaxDetect</strong> of ReaxFF MD trajectory post processing, kinetic model building and reduction. The ReaxFF MD trajectory is the only thing needed for the whole analysis. The kinetic model from ReaxFF simulation is of key importance for studying mechanism of complex reactions at molecular level and understanding the reaction mechanism in extreme conditions where experiments are difficult to be done.</p>
-<img src="imgs/ho-cut-network.png" width="80%" style="align:center">
-<h3 id="active-colloidal-gel">Active Colloidal Gel</h3>
-<p>Active materials are entities that can convert chemical fuel into mechanical motion. Active matter exists naturally, such as flocks of animals, bacteria and self-organized proteins in the cell like microtubules. Due to self-propulsion from chemical fuel consumption, active matter systems are in a non-equilibrium state, which results some interesting behavior like self-assembly. Colloidal gel is a typical attractive system which exists widely in biological systems. They are in metastable state and will become phase separated eventually. We want to see the behavior of active particles in a attractive environment and how it can influence the phase separation process of colloidal gel. (Done with Professor <a href="http://www.che.caltech.edu/groups/jfb/index.html">John F. Brady</a> at Caltech.)</p>
-<div align="center">
-<img src="imgs/Snapshot-batch0@200tB.png" align="middle">
-<p><strong>Active matter system with different activity (rotational Peclet number PeR). From left to right, activity becomes higher.</strong></p>
-</div>
-<h3 id="ionic-liquids">Ionic Liquids</h3>
-<p>Ionic liquid is a salt in liquid state consisting of ions and short-lived ion pairs. They have been used in various fields such as extraction and separation, catalyst, materials fabrication, analytical technology, and energy. The applications of ionic liquids rely on the knowledge of their most relevant thermodynamic properties, especially transport properties like viscosity and electrical conductivity.</p>
-<h3 id="graphene-quantum-dots">Graphene Quantum Dots</h3>
-<p>Graphene quantum dots (GQDs) are quantum dots with 2D carbon sheet with particle size around 10 nm. It can be made from oxidizing grphene oxide or synthized bottom-up. As a new type of graphene derivative, GQDs with tunable bandgap have attracted tremendous concern and research due to quantum confinement and edge effects, which give GQDs a promising application in plenty of fields. We developed an economical and efficient chemical pyrolysis approach to perpare GQDs. We also prepared MoS2-GQD complex and tested the potential application inelectrolysis of water.</p>
-<div align="center">
-<img src="imgs/expr_final.png" width="10%"> 
-<img src="imgs/pl.png" width="30%">
-<p><strong>Left: GQD sample, Right: 2D Fluorescence Spectrum</strong></p>
-</div>
-<br>
-<h2 id="personal-projects">Personal Projects</h2>
-<p>I am keen to programming and have a lot of practice at C/C++ and python. Some projects are listed below:</p>
-<h3 id="games"><em>Games</em></h3>
-<h3 id="minesweeper"><a href="https://github.com/flipboards/minesweeper">Minesweeper</a></h3>
-<p>A desktop minesweeper game, with auto solver. Qt5 libraries is needed for compile.</p>
-<img src="apps/minesweeper/minesweeper-scrshot.PNG" width="50%">
-<h3 id="jump-by-unity3d">Jump! (by Unity3D)</h3>
-<p>A game similar with Dinasour in Chrome (when having error);</p>
-<p>Download desktop version <a href="apps/jump/Jump!_for_PC.rar">here</a> (windows);</p>
-<p>Download android app <a href="apps/jump/Jump!_1.2.2.apk">here</a> (version 1.2.2);</p>
-<img src="apps/jump/jump-scrshot.PNG">
-<h3 id="maze-by-opengl">Maze (by OpenGL)</h3>
-<p>A classical maze game with both 2D and 3D version. I employed both DFS and Prim algorithm for maze generation.</p>
-<p>Download desktop version <a href="apps/maze/3Dmaze-test-edition4(windows).zip">here</a></p>
-<img src="apps/maze/maze-scrshot.PNG" width="50%">
-<h3 id="tools"><em>Tools</em></h3>
-<h3 id="fast-smiles"><a href="https://github.com/flipboards/fast_smiles">Fast Smiles</a></h3>
-<p>A <a href="https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system">SMILES</a> (Simplified molecular-input line-entry system) class written in C++. It is simple and fast with support of rings and multiple bonds. A parser and string generation function is also provided. There is also a canonicalization method using modified CANGEN algorithm. However, complex structure like aromatic ring and atoms heavy than sulfur is not supported currently.</p>
-<img src="http://2.bp.blogspot.com/-c-PbpXdua2Q/VHbLUHXM1zI/AAAAAAAAAD8/tWQ911qreGQ/s1600/branch1.gif">
-<h3 id="cvm"><a href="https://github.com/flipboards/cvm">CVM</a></h3>
-<p>A stack-based virtual machine. Currently it can read cvm-assembly file (*.calca) and a sample is given in the repository.</p>
-<p>The instruction set of CVM contains basic data moving and arithmetic functions. Instead of memory address, instructions of CVM contains only a memcode indicating where is the operation number (stack, heap, register, etc.) and the address offset. Also there is a memory manager controls the translation of linear address, memory allocation and read/write of stack, heap and constants.</p>
-<p>At first my target was writing a calculator, so I wrote <a href="apps/calculator/calculator-stable32.exe">this</a>. But when my project is growing larger (especially when I adding custom function), I started to feel that this calculator become a tiny virtual machine. So I continue develop it into a real VM.</p>
-<p>The VM corresponding to a parser and language (<a href="https://github.com/flipboards/csl">CSL</a>), which is still under developing.</p>
-<h3 id="quickrt"><a href="https://github.com/flipboards/QuickRT">QuickRT</a></h3>
-<p>Ray tracer with reflection, refraction and anti-aliasing support. It is still under development.</p>
-<div align="center">
-    <img src="https://raw.githubusercontent.com/flipboards/QuickRT/master/screenshots/scene.png" width="50%">
-</div>
-<h3 id="pystiff"><a href="https://github.com/flipboards/pystiff">PyStiff</a></h3>
-<p>A small python project offering finite element method (FEM) computation of elastic construction. It handles input file (commands) and data file in text format.</p>
-<hr>
-<p><em>By Yanze Wu 2017</em></p>
-</article>
+<script>
+    fetch('src/cv.md')
+       .then(response => response.text())
+       .then((data) => {
+        write_markdown(data)
+    })
 
-
-<audio controls="controls" style="display: none;"></audio></body><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></html>
+    function write_markdown(text){
+        var converter = new showdown.Converter(),
+        text = text,
+        html = converter.makeHtml(text);
+        document.getElementById("content").innerHTML = html;
+    }
+ </script>
+ 
+ <div id="content" class="markdown-body">
+ </div>
+</body>
+</html>
