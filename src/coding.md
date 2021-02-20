@@ -32,7 +32,7 @@ Hartree Fork, CIS, MP2 in pure python. Supports result visualization. Below is t
 
 A desktop minesweeper game, with auto solver. Qt5 libraries is needed for compile.
 
-<img src="apps/minesweeper/minesweeper-scrshot.png" width="50%">
+<img src="imgs/minesweeper-scrshot.png" width="50%">
 
 ### Jump! (by Unity3D)
 
@@ -42,7 +42,7 @@ Download desktop version [here](apps/jump/Jump!_for_PC.rar) (windows);
 
 Download android app [here](apps/jump/Jump!_1.2.2.apk) (version 1.2.2);
 
-<img src="apps/jump/jump-scrshot.png">
+<img src="imgs/jump-scrshot.png">
 
 ### [Maze](/maze) (by OpenGL)
 
@@ -50,7 +50,7 @@ A classical maze game with both 2D and 3D version. I employed both DFS and Prim 
 
 Download desktop version [here](apps/maze/3Dmaze-test-edition4(windows).zip)
 
-<img src="apps/maze/maze-scrshot.png" width="50%">
+<img src="imgs/maze-scrshot.png" width="50%">
 
 ### [Fast Smiles](https://github.com/yanzewu/fast_smiles)
 
