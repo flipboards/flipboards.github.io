@@ -60,6 +60,15 @@ automatic program __ReaxDetect__ of ReaxFF MD trajectory post processing, kineti
 <br>Our auto-generated reaction network in methane combustion.
 </div>
 
+### Machine Learning of MD Simulated Data
+
+Knowledge of the thermodynamic properties of molecules is essential for chemical process design and the development of new materials. In this project, we develop a high-throughput calculation protocol to predict molecular dynamics simulation data. For input, we use temperature, pressure and 23 molecular fingerprints obtained from SMARTS in OpenBabel. All these features are later simplified by SVM using a recursive feature elimination process (RFE). We have used 34,330 data points as our traning set and our maximum error is less than 1% all the thermodynamic properties.
+
+<div align='center'>
+<img src="imgs/mdlearn-sr.png" width="80%">
+<br>
+</div>
+
 ### Active Colloidal Gel
 
 Active materials are entities that can convert chemical fuel into mechanical motion. Active matter exists naturally, such as flocks of animals, bacteria and self-organized proteins in the cell like microtubules. Due to self-propulsion from chemical fuel consumption, active matter systems are in a non-equilibrium state, which results some interesting behavior like self-assembly. Colloidal gel is a typical attractive system which exists widely in biological systems. They are in metastable state and will become phase separated eventually. We want to see the behavior of active particles in a attractive environment and how it can influence the phase separation process of colloidal gel. (Done with Professor [John F. Brady](http://www.che.caltech.edu/groups/jfb/index.html) at Caltech.)

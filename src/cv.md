@@ -1,5 +1,8 @@
 # Yanze Wu
 
+
+[中文](zh-cn.htm)
+
 Graduate student at Penn. Love physics. Love coding. Love art.
 
 __Github__: [yanzewu](https://github.com/yanzewu)
