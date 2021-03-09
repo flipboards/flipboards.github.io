@@ -1,7 +1,10 @@
+# 吴彦泽
 
-[< home](index.htm)
+- 上海交通大学 本科
+- 宾夕法尼亚大学 化学硕士在读
 
-Welcome! 下面是我的项目介绍。
+Github: [https://github.com/yanzewu](https://github.com/yanzewu)
+
 
 ## 研究项目
 
@@ -93,3 +96,34 @@ Line自动分析读取文件，同时支持gnuplot style的语法和matlab式的
 Repo: [https://github.com/yanzewu/ilthermo-scraper](https://github.com/yanzewu/ilthermo-scraper)
 
 写的一个爬虫。Requests+BS4爬取ILthermo数据库，进行简单parse之后再使用SQLalchemy存到数据库里。
+
+### Maze
+
+C++/OpenGL写的迷宫游戏（支持2D和3D FPP）。支持DFS和Prim两种算法。 
+
+桌面版App: [here](apps/maze/3Dmaze-test-edition4(windows).zip)
+
+<div align='center'>
+<img src="imgs/maze-scrshot.png" width="40%">
+<img src="imgs/maze-scr2.png" width="38%">
+</div>
+
+### Minesweeper
+
+Repo: [https://github.com/yanzewu/minesweeper](https://github.com/yanzewu/minesweeper)
+
+基于C++/Qt写的扫雷游戏。
+
+<div align='center'>
+<img src="imgs/minesweeper-scrshot.png" width="50%">
+</div>
+
+### QuickRT
+
+Repo: [https://github.com/yanzewu/QuickRT](https://github.com/yanzewu/QuickRT)
+
+C++光线追踪小程序。
+
+<div align='center'>
+    <img src='https://raw.githubusercontent.com/yanzewu/QuickRT/master/screenshots/scene.png' width='50%'>
+</div>
