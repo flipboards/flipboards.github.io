@@ -1,7 +1,6 @@
 # Yanze Wu
 
 
-[中文](zh-cn.htm)
 
 Graduate student at Penn. Love physics. Love coding. Love art.
 
@@ -11,7 +10,6 @@ __Academic Goes Here__: [Academic](research.htm).
 
 __Coding Projects Goes Here__: [Coding](coding.htm).
 
-__Art Projects__: Oops, I'm still learning. I'll try to make a link one day!
 
 <br><br>
 
